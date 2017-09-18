@@ -85,7 +85,7 @@
     
     _thumbLayer = [CAShapeLayer layer];
     _thumbLayer.backgroundColor = [[UIColor clearColor] CGColor];
-    _thumbLayer.frame = CGRectMake(2.0, 2.0, self.bounds.size.height-4.0, self.bounds.size.height-4.0);
+    _thumbLayer.frame = CGRectMake(3.0, 3.0, self.bounds.size.height-6.0, self.bounds.size.height-6.0);
     _thumbLayer.cornerRadius = _thumbLayer.frame.size.height/2.0;
     CGPathRef knobPath = [UIBezierPath bezierPathWithRoundedRect:_thumbLayer.bounds cornerRadius:floorf(_thumbLayer.bounds.size.height/2.0)].CGPath;
     _thumbLayer.path = knobPath;
@@ -381,10 +381,10 @@
 #pragma mark Thumb Frame
 
 - (CGRect) thumbFrameForState:(BOOL)isOn {
-    return CGRectMake(isOn ? self.bounds.size.width-self.bounds.size.height+2.0 : 2.0,
-                      2.0,
-                      self.bounds.size.height-4.0,
-                      self.bounds.size.height-4.0);
+    return CGRectMake(isOn ? self.bounds.size.width-self.bounds.size.height+3.0 : 3.0,
+                      3.0,
+                      self.bounds.size.height-6.0,
+                      self.bounds.size.height-6.0);
 }
 
 #pragma mark -
